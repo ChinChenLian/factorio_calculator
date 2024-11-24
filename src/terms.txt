@@ -1,0 +1,3 @@
+sec  = second
+calc = calculate
+prod = productivity
