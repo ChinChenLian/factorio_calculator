@@ -61,7 +61,7 @@ impl Furnace {
         println!("iron plate: {}", amount);
         
         depth += 1;
-        let total_input_copper_ore: f32 
+        let total_input_iron_ore: f32 
             = calculate::calc_input(total_time, amount, INPUT_IRON_ORE);
     }
     pub fn copper_plate(demand_per_sec: f32, mut depth: u32) {
