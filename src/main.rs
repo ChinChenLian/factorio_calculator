@@ -1,17 +1,12 @@
 mod message;
-// mod research_lab;
-// mod assembler;
 // use std::io;
 
 mod v0_17;
-use v0_17::research_lab::ResearchLab;
-
-
+mod calculate;
+mod print;
 
 fn main() {
-    ResearchLab::research();
-    /* request the spm needed
-     */
+    v0_17::research_lab::ResearchLab::research();
 
     /* spm
      * 
@@ -21,9 +16,23 @@ fn main() {
      * call(total request);
      */
 
-    // assembler speed
-    // module slot
-    // speed mod
-    // productivity mod
-    // research mod
+    /* structure
+     * research lab
+     *      - recipe
+     *          - assembler / furnace / mining drill 
+     *            / oil refinery / chemical plant / pumpjack 
+     *            / rocket launcher
+     *              - module
+     *          - next recipe
+     */
+}
+mod parameter {
+    pub const SECONDS_IN_MINUTE: f32    = 60.0;
+    pub static SCIENCE_PER_MINUTE: f32  = 60.0;
+
+    pub static DISPLAY_POWER: bool        = false;
+    pub static DISPLAY_POWER_TOTAL: bool  = false;
+    pub static DISPLAY_AMOUNT: bool       = true;
+
+    pub static AUTOMATION_SCIENCE: bool = true;
 }

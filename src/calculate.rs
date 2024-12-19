@@ -1,14 +1,14 @@
 pub fn calc_amount(
     total_speed: f32,
     total_productivity: f32,
-    demand_per_sec: f32, 
-    time_to_craft: f32, 
+    group_output: f32, 
+    crafting_time: f32, 
     output: f32
     ) -> (f32, f32) {
         
-    let total_time: f32     = time_to_craft / total_speed;
+    let total_time: f32     = crafting_time / total_speed;
     let total_output: f32   = (output * total_productivity) / total_time;
-    let amount: f32         = demand_per_sec / total_output;
+    let amount: f32         = group_output / total_output;
     // dbg!(total_speed, total_productivity, demand_per_sec, time_to_craft, output);
     // dbg!(total_time, total_output, amount);
 
